@@ -14,7 +14,7 @@ const ListItem = ({ data }: Props) => {
         alt={`${data.id}`}
         className="mb-4 bg-indigo-50 dark:bg-gray-800 rounded-lg transition-all"
       />
-      <div className="text-base font-medium text-gray-800 antialiased mb-1 flex items-center dark:text-gray-100 transition-all">
+      <div className="text-base font-medium text-gray-800 antialiased mb-2 flex items-center dark:text-gray-100 transition-all">
         <a
           href={`${data.url}`}
           target="_blank"
