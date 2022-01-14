@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 import { useTheme } from 'next-themes'
 
+declare const analytics: any
+
 const IndexPage = () => {
   const { resolvedTheme, setTheme } = useTheme()
   return (
@@ -20,6 +22,7 @@ const IndexPage = () => {
           href="https://evergreen.segment.com"
           target="_blank"
           rel="noreferrer"
+          onClick={() => analytics.track('Evergreen Link Clicked')}
         >
           design system
         </a>{' '}
@@ -37,18 +40,20 @@ const IndexPage = () => {
         , or join me to the{' '}
         {resolvedTheme === 'dark' ? (
           <a
-            onClick={() =>
+            onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-            }
+              analytics.track('Change to Light mode')
+            }}
             className="cursor-pointer"
           >
             bright
           </a>
         ) : (
           <a
-            onClick={() =>
+            onClick={() => {
               setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-            }
+              analytics.track('Change to Dark mode')
+            }}
             className="cursor-pointer"
           >
             dark
@@ -58,15 +63,30 @@ const IndexPage = () => {
       </p>
       <p className="text-base text-gray-500 antialiased dark:text-gray-400 pt-20 -mb-5 transition-all">
         This site is handcrafted with 💜,{' '}
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
+        <a
+          href="https://nextjs.org/"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => analytics.track('Nextjs Link Clicked')}
+        >
           Next.js
         </a>
         ,{' '}
-        <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer">
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => analytics.track('Tailwind Link Clicked')}
+        >
           Tailwind
         </a>{' '}
         and deployed with{' '}
-        <a href="https://vercel.com/" target="_blank" rel="noreferrer">
+        <a
+          href="https://vercel.com/"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => analytics.track('Vercel Link Clicked')}
+        >
           Vercel
         </a>
         .

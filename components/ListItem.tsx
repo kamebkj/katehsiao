@@ -6,6 +6,8 @@ type Props = {
   data: Project
 }
 
+declare const analytics: any
+
 const ListItem = ({ data }: Props) => {
   return (
     <div className="mb-16">
@@ -20,6 +22,7 @@ const ListItem = ({ data }: Props) => {
           target="_blank"
           rel="noreferrer"
           className="h-6"
+          onClick={() => analytics.track(`Project ${data.title} Clicked`)}
         >
           {data.title}
         </a>
@@ -30,7 +33,14 @@ const ListItem = ({ data }: Props) => {
         {data.caseUrl ? (
           <>
             Read more about the case study in{' '}
-            <a href={`${data.caseUrl}`} target="_blank" rel="noreferrer">
+            <a
+              href={`${data.caseUrl}`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() =>
+                analytics.track(`Case study ${data.title} Clicked`)
+              }
+            >
               this Figma prototype
             </a>
             .

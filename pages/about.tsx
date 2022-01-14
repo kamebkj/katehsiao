@@ -1,6 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
+declare const analytics: any
+
 const AboutPage = () => {
   return (
     <Layout title="About">
@@ -15,6 +17,7 @@ const AboutPage = () => {
           href="https://evergreen.segment.com"
           target="_blank"
           rel="noreferrer"
+          onClick={() => analytics.track('Evergreen Link Clicked on About')}
         >
           Evergreen design system
         </a>{' '}
@@ -23,6 +26,7 @@ const AboutPage = () => {
           href="https://segment.com/product/connections/"
           target="_blank"
           rel="noreferrer"
+          onClick={() => analytics.track('Connections Link Clicked on About')}
         >
           Connections
         </a>{' '}
@@ -31,11 +35,17 @@ const AboutPage = () => {
           href="https://www.splunk.com/en_us/software/it-service-intelligence.html"
           target="_blank"
           rel="noreferrer"
+          onClick={() => analytics.track('Splunk Link Clicked on About')}
         >
           IT products
         </a>{' '}
         at Splunk. You can find my resume at{' '}
-        <a href="https://read.cv/kamebkj" target="_blank" rel="noreferrer">
+        <a
+          href="https://read.cv/kamebkj"
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => analytics.track('ReadCV Clicked on About')}
+        >
           read.cv/kamebkj
         </a>{' '}
         or if you prefer a{' '}
@@ -43,6 +53,7 @@ const AboutPage = () => {
           href="https://drive.google.com/file/d/1oZrEKqTgPvYysDS6IdIj4zP0Ue4em3r4/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
+          onClick={() => analytics.track('PDF Clicked on About')}
         >
           pdf
         </a>{' '}
