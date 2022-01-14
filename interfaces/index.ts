@@ -3,5 +3,6 @@ export type Project = {
   title: string
   image: string
   url: string
+  caseUrl?: string
   description: string
 }

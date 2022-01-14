@@ -26,7 +26,18 @@ const ListItem = ({ data }: Props) => {
         <FiArrowUpRight className="ml-1 -mb-1" />
       </div>
       <p className="text-base text-gray-700 antialiased dark:text-gray-200 transition-all">
-        {data.description}
+        {data.description}{' '}
+        {data.caseUrl ? (
+          <>
+            Read more about the case study in{' '}
+            <a href={`${data.caseUrl}`} target="_blank" rel="noreferrer">
+              this Figma prototype
+            </a>
+            .
+          </>
+        ) : (
+          ''
+        )}
       </p>
       {/* <Link href="/projects/[id]" as={`/projects/${data.id}`}>
         <a>Link</a>

@@ -6,6 +6,8 @@ export const projectData: Project[] = [
     title: 'Segment Design System - Evergreen',
     image: '/project-thumbnail-evergreen.png',
     url: 'https://evergreen.segment.com/',
+    caseUrl:
+      'https://crypto.figmatic.com/prototype/kydnfj6p35603/Fa5ARZxDgTWmH8lxdIaK4eCV7ru2',
     description:
       'Led the redesign of Segment’s design system and the entire product line with a modern look and feel that matches our new brand identity.',
   },
