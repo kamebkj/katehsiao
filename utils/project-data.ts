@@ -24,6 +24,8 @@ export const projectData: Project[] = [
     title: 'Segment Destination Filters',
     image: '/project-thumbnail-filters.png',
     url: 'https://segment.com/product/connections/',
+    caseUrl:
+      'https://crypto.figmatic.com/prototype/kykt5rhz20581/NF2DHV6ggcZ73iOxoAcoVGiVsVl1',
     description:
       'Led the design and research for Destination Filters, a paid feature for Segment users to control their data sent to the end tool for use cases such as privacy concerns. Deliver direct and positive business impact as a result.',
   },
