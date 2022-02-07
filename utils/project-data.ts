@@ -16,6 +16,8 @@ export const projectData: Project[] = [
     title: 'Segment Functions',
     image: '/project-thumbnail-functions.png',
     url: 'https://segment.com/product/connections/functions/',
+    caseUrl:
+      'https://crypto.figmatic.com/prototype/kzd2pkmp74974/Ks8VFIvApWO4VYE8nu5xmleOdQ03',
     description:
       'Led the end-to-end design and research for Segment Functions, a product that empowers developers to send any data into and out of Segment by just a few lines of code. Announced in the main keynote session at the company’s annual conference.',
   },
