@@ -12,7 +12,8 @@ const AboutPage = () => {
         </span>
       </div>
       <p className="text-base text-gray-700 antialiased dark:text-gray-200 transition-all">
-        Currently leading{' '}
+        Currently designing Messenger Design System at Meta. 
+        Previously leading{' '}
         <a
           href="https://evergreen.segment.com"
           target="_blank"
